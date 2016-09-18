@@ -1,0 +1,21 @@
+
+
+<ion-view view-title="Conducteurs">
+	<ion-content class="padding">
+
+		<h3><img src="img/icon/permis.png" /><span>Liste</span> des conducteurs</h3>
+
+        <p>Pour modifier ou supprimer un conducteur, veuillez le sélectionner.</p>
+
+        <ion-list show-delete="false" can-swipe="true">
+            <ion-item ng-repeat="conducteur in conducteurs" ng-click="gotoEdit(conducteur.id)">
+               <p>{{conducteur.nom}}  {{conducteur.prenom}}</p>  <ion-option-button class="button-assertive icon ion-trash-a" ng-click="conducteurRemove(conducteur)"></ion-option-button>
+            </ion-item>
+             <ion-item >
+               <button class="button icon-left ion-android-add"    ui-sref="conducteurs_form"> Ajouter</button>
+            </ion-item>
+        </ion-list>
+
+
+	</ion-content>
+</ion-view>

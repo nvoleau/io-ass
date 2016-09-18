@@ -1,0 +1,50 @@
+
+
+<ion-view view-title="Conducteurs">
+	<ion-content class="padding">
+		<div class="padding">
+			<h3><img src="img/icon/permis.png" /><span>{{titre}}</span> un conducteur</h3>
+			<p> (voir le permis de conduire)</p> 
+			<form role="form" class="list" ng-submit='saveConducteur(item)'>		
+
+				<label class="item item-input item-stacked-label">
+
+					<span class="input-label">Nom</span>
+			    	<input type="text" placeholder="Martin" ng-model="item.nom" />
+
+			    	<span class="input-label">Prénom</span>
+			    	<input type="text" placeholder="Jean-Marc" ng-model="item.prenom" />
+
+					<span class="input-label">Adresse</span>
+			    	<input type="text" placeholder="Rue des Fleurs" ng-model="item.addr" />
+
+					<span class="input-label">Pays</span>
+			    	<input type="text" placeholder="France" ng-model="item.pays" />
+
+					<span class="input-label">Permis de conduire n°</span>
+			    	<input type="text" placeholder="12659K02 56" ng-model="item.permnum" />
+
+                    <span class="input-label">Catégorie</span>
+                    <div class="radio-small">
+                        <ion-radio ng-model="item.categ" ng-value="'A'"   ><b>A</b></ion-radio>
+                        <ion-radio ng-model="item.categ" ng-value="'A1'"  ><b>A1</b></ion-radio>
+                        <ion-radio ng-model="item.categ" ng-value="'B'"   ><b>B</b></ion-radio>
+                        <ion-radio ng-model="item.categ" ng-value="'B1'"  ><b>B1</b></ion-radio>
+                        <ion-radio ng-model="item.categ" ng-value="'C'"   ><b>C</b></ion-radio>
+                        <ion-radio ng-model="item.categ" ng-value="'D'"   ><b>D</b></ion-radio>
+                        <ion-radio ng-model="item.categ" ng-value="'E(B)'"><b>E<span>(B)</span></b></ion-radio>
+                        <ion-radio ng-model="item.categ" ng-value="'E(C)'"><b>E<span>(C)</span></b></ion-radio>
+                        <ion-radio ng-model="item.categ" ng-value="'E(D)'"><b>E<span>(D)</span></b></ion-radio>
+                    </div>
+
+                    <br />
+                    <span class="input-label clear">Permis valable jusqu’au</span>
+                    <input type="date" placeholder="Permanent" ng-model="item.validite" />
+
+                   
+                </label>
+				 <button class="button button-block button-positive">Enregistrer</button>
+			</form>
+		</div>
+	</ion-content>
+</ion-view>

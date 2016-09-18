@@ -1,0 +1,21 @@
+
+
+<ion-view view-title="Conducteurs">
+	<ion-content class="padding">
+
+		<h3><img src="img/icon/permis.png" /><span>Liste</span> des conducteurs</h3>
+
+        <p>Veuillez sélectionner le conducteur :</p>
+
+        <form role="form" class="list" ng-submit="addAss()">
+            <label class="item item-input item-stacked-label">
+                    <ion-list ng-repeat="conducteur in conducteurs">
+                         <ion-radio ng-model="choice.conducteur" ng-value="'{{conducteur.id}}'" ng-change="goToCirconstance(conducteur)">{{conducteur.nom}} {{conducteur.prenom}}</ion-radio>
+                    </ion-list>
+            </label>
+            <button class="button icon-right ion-chevron-right" ui-sref="const_circonstances"> Continuer</button>
+        </form>
+
+
+	</ion-content>
+</ion-view>

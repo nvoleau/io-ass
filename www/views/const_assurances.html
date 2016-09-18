@@ -1,0 +1,20 @@
+<ion-view view-title="Assurances">
+    <ion-content class="padding">
+
+        <h3><img src="img/icon/assurance.png" /><span>Liste</span> des assurances</h3>
+
+        <p>Veuillez sélectionner votre assurance :</p>
+
+        <form role="form" class="list" ng-submit="addAss()">
+            <label class="item item-input item-stacked-label">
+                 <ion-list ng-repeat="assurance in assurances">
+                     <ion-radio ng-model="choice.assurance" ng-value="'{{assurance.id}}'" ng-change="goToVehicule(assurance)">{{assurance.name}}</ion-radio>
+                 </ion-list>
+
+            </label>
+            <button class="button icon-right ion-chevron-right" ui-sref="const_vehicules"> Continuer</button>
+        </form>
+
+
+    </ion-content>
+</ion-view>

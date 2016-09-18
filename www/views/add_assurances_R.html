@@ -1,0 +1,57 @@
+<ion-view view-title="Assurances">
+	<ion-content class="padding">
+		<div class="padding">
+			<h1>Ajouter une assurances</h1>  <!-- ng-submit='AddAss(nom,nCtra,nCtVt,DtDu,DtAu,agence,agNom,addr,pays,MailTel,Degat)' -->
+			<form role="form" class="list">		
+
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Nom</span>
+			    	<input type="text" placeholder="Mon assurance" ng-model="dataAss.nom">
+				</label>
+				<label class="item item-input item-stacked-label">
+			    	<span class="input-label">N° de contrat</span>
+			    	<input type="text" placeholder="Saisissez le n° de votre contrat d'assurance" ng-model="dataAss.nCtra">
+				</label>
+				<label class="item item-input item-stacked-label">
+			    	<span class="input-label">N° de carte verte</span>
+			    	<input type="text" placeholder="Saisissez le n° de votre carte verte" ng-model="dataAss.nCtVt">
+				</label>
+				<label class="item item-input item-stacked-label">
+		  			<span class="input-label">Attestation d’assurance ou carte verte valable </span>
+		  			<br /><span>du <input type="date" placeholder="11/11/1977" ng-model="dataAss.DtDu"> au <input type="date" placeholder="11/11/1977" ng-model="dataAss.DtAu"></span>
+				</label>
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Agence (ou bureau, ou courtier) </span>
+			    	<input type="text" placeholder="Si information saisissez le type" ng-model="dataAss.agence">
+				</label>
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Nom</span>
+			    	<input type="text" placeholder="Saisissez nom de votre interlocuteur" ng-model="dataAss.agNom">
+				</label>		
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Adresse</span>
+			    	<input type="text" placeholder="Rue de la Paume" ng-model="dataAss.addr">
+				</label>
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Pays</span>
+			    	<input type="text" placeholder="France" ng-model="dataAss.pays">
+				</label>
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Email ou Tél</span>
+			    	<input type="text" placeholder="martin@pierre.com/0600000000" ng-model="dataAss.MailTel">
+				</label>
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Les dégâts matériels au véhicule sont-ils assurés par le contrat ?</span>
+					<div>
+						<br />
+						<ion-radio ng-model="dataAss.Degat" ng-value="'Oui'">Oui</ion-radio>
+						<ion-radio ng-model="dataAss.Degat" ng-value="'Non'">Non</ion-radio>
+					</div>
+				</label>
+
+				<button class="button button-block button-positive" ng-click="addAss()">Enregistrer</button>
+
+			</form>
+		</div>
+	</ion-content>
+</ion-view>

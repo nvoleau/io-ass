@@ -1,0 +1,115 @@
+﻿/* Menu
+==================================*/
+ion-side-menu.menu-left.menu    { background-color: #2a2e32 !important;}
+ion-item a                      { background-color: #1c1f22 !important;}
+ion-item:hover a                { background-color: #000000 !important; color :#ffffff; cursor:pointer; }
+.item                           { border:1px solid #707172; color : #707172 ;}
+
+.bar-header                     { background-color: #000000 !important; border-bottom:1px solid #2093bd;}
+.bar-header .title              { background-color: #000000 !important; color:#ffffff; }
+
+
+/* Bar Nav
+==================================*/
+ion-header-bar .title .mini     { font-size: 0.7em; color:#2093bd; font-weight:bold;}
+ion-nav-bar                     { background-color: #000000 !important;} 
+ion-nav-view                    { background-color: #000000 !important;} 
+
+
+/* Content
+==================================*/
+ion-view                        { background-color: #000000 !important;} 
+ion-view.edito                  { background-color: #a3a3a3 !important;} 
+.padding                        { padding: 20px;}
+a                               { color:#00bbff; }
+a:hover                         { color:#3cd1ee; }
+h1, h2, h3                      { color:#2093bd;} 
+h2 span, h3 span                { color:#ffffff;}
+h2 img, h3 img                  { margin-right: 4px;}
+p                               { text-align:justify; color:#e8e8e8;} 
+.center                         { text-align:center;} 
+.clear                          { float:left;clear:both;}
+
+ion-view .blk                  { background-color: #efefef !important; padding:10px 20px 20px 20px; border-radius: 20px; position:relative; margin:15px 0 35px 0;} 
+ion-view .blkconseil           { background:url('../img/icon/blk_conseil.png') no-repeat; height:77px; width:77px; position:absolute; top:-15px;left:-10px; z-index:99;} 
+ion-view .blkequipe            { background:url('../img/icon/blk_equipe.png') no-repeat; height:77px; width:77px; position:absolute; top:-15px;left:-10px; z-index:99;} 
+ion-view .blkobjectif          { background:url('../img/icon/blk_objectif.png') no-repeat; height:77px; width:77px; position:absolute; top:-15px;left:-10px; z-index:99;} 
+ion-view .blk h3               { font-weight:bold; padding:0 0 30px 60px !important; margin-top:0px !important; } 
+ion-view .blk h3 span          { color:#000000; } 
+ion-view .blk p                { font-size : 1.1em; color:#333333;} 
+
+ion-view .blk .txtval          { color:#000000; font-weight:bold} 
+ion-view .blk .txtvalR b       { color:#b20000;} 
+ion-view .blk a                { color:#085c7b; } 
+ion-view .blk a:hover          { color:#2093bd;} 
+ion-view .blk .deca            { padding-left:18px} 
+ion-view .blk ul               { padding-left:18px} 
+ion-view .blk li               { border-bottom: 1px solid #ccc; padding-bottom:6px; margin-bottom:12px;}
+
+ion-view .etape h3              { text-align:center; width:100%;} 
+
+/* button
+==================================*/
+ion-content .button,
+ion-content .button.active,
+ion-content .button.activated  { background-color:#2093bd; color:#ffffff;} 
+ion-content .button:hover      { background-color:#08a4dd; color:#ffffff;} 
+
+ion-content p.homebar          { margin-top:20px; display:block;} 
+ion-content .buttonH           { border-color: transparent; background-color: #f8f8f8;
+  color: #444; position: relative; display: inline-block; margin: 4px 2px; padding: 0 8px;
+  min-width: 52px; min-height: 47px;  border-width: 1px; border-style: solid; border-radius: 4px;
+  vertical-align: top; text-align: center; text-overflow: ellipsis; font-size: 16px; line-height: 20px; cursor: pointer; text-decoration: none;
+  }
+ion-content .buttonH,
+ion-content .buttonH.active,
+ion-content .buttonH.activated  { background-color:#54514a; color:#ffffff; margin: 7px 7px !important;} 
+ion-content .buttonH:hover      { background-color:#08a4dd; color:#ffffff;} 
+ion-content .buttonH span       { font-size:0.7em; font-weight :bold;} 
+ion-content .buttonH b          { font-size:1em; text-transform: uppercase;}
+
+ion-content .buttonA            { width:252px; height:66px; background:url('../img/commencer.png') no-repeat 0 0;border-width: 0px; margin: 5px 5px 5px 5px !important;}
+ion-content .buttonA:hover      { background:url('../img/commencer.png') no-repeat 0 -66px;}
+ion-content .buttonC            { width:252px; height:66px; background:url('../img/conseils.png') no-repeat 0 0;border-width: 0px; margin: 5px 5px 5px 5px  !important;}
+ion-content .buttonC:hover      { background:url('../img/conseils.png') no-repeat 0 -66px;}
+
+ion-content .circonst           { padding: 0 20px; width: 200px; height: 200px; font-size:1.5em; line-height: 1.5em; min-width: 52px; min-height: 47px; margin: 6px 2px; }
+
+ 
+/* form
+==================================*/
+.input-label                    { color : #ffffff;}
+.item-stacked-label             { border:0px}
+.item-input input               { color : #a1a3a5; background-color:#2a2e32; padding: 4px 8px 4px 8px !important;  height : 2.4em; margin-bottom:10px;}
+.item-input input:focus         { color : #ffffff;}
+
+/*ionic radio buttons */
+ion-content .item               { padding: 0 !important; background-color: transparent !important; margin-bottom: 5px !important; color: #ededed; border :0px !important; }
+/*ion-content .item-content       { background:url('../img/icon/CDRcheckmark.png') 100% 50%  no-repeat #1c1f22   !important; color: #ededed; border :0px !important; border-bottom :1px solid #2093bd !important; margin-bottom: 5px !important;}  
+*/
+ion-content .item-content       { background: no-repeat #1c1f22   !important; color: #ededed; border :0px !important; border-bottom :1px solid #2093bd !important; margin-bottom: 5px !important;}  
+
+.item-radio .radio-icon         { padding: 9px 14px; }
+
+.radio-small                    { width:100%; display:block; float:left;}
+.radio-small .item-content      { width:90px; border-radius: 10px !important; border:0px !important; font-size:1em; padding: 12px 4px 12px 8px;  background-color:#2a2e32 !important;}
+.radio-small .item              { width:90px; float:left; margin:4px 12px 4px 0px !important; }
+.radio-small  b                 { font-size:1.4em; width:40%; float:left; text-align:center;}
+.radio-small span               { font-size:0.7em;}
+.radio-small .radio-icon        { padding: 9px 14px; }
+
+.radio-medium                   { width:100%; display:block; float:left;}
+.radio-medium .item-content     { width:200px; border-radius: 10px !important; border:0px !important; font-size:1em; padding: 12px 4px 12px 8px;  background-color:#2a2e32 !important;}
+.radio-medium .item             { width:200px; float:left; margin:4px 12px 4px 0px !important; }
+.radio-medium  span             { font-size:1em; width:80%; float:left; text-align:center;}
+.radio-medium .radio-icon       { padding: 8px 14px; }
+
+/* home
+==================================*/
+
+.homelogo { 
+    background:url('../img/Logo_ConstaMagic.png') no-repeat center 30px  !important; padding-top:280px;
+   -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;
+}
+
+

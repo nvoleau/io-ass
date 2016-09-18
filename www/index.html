@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>ConstaMagic.0.6</title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <!--    ng-cordova.js  ng-cordova-mocks.js -->
+
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script> 
+    <!--   <script src="lib/ngCordova/dist/ng-cordova-mocks.js"></script>  -->  
+    <script src="cordova.js"></script>
+
+    <!-- Controllers -->
+    <script src="src/app.js"></script>
+    <script src="src/controllers/AssCtrl.js"></script>
+     <script src="src/controllers/VehiculeCtrl.js"></script>
+     <script src="src/controllers/ConducteurCtrl.js"></script>
+     
+     <script src="src/controllers/ConstatCtrl.js"></script>
+    <!-- <script src="src/controllers/AssCtrlAdd.js"></script> -->
+
+    <!-- Directives -->
+    <script src="src/directives/itemListDirective.js"></script>
+
+    <!-- Services -->
+    <script src="src/services/itemData.js"></script>
+    <script src="src/services/vehiculeData.js"></script>
+    <script src="src/services/conducteurData.js"></script>
+    
+      
+
+  </head>
+  <body ng-app="myConstat">
+
+      <ion-side-menus>
+          <!-- Left menu -->
+          <ion-side-menu side="left" id="sideLeft">
+              <ion-list>
+                  <ion-item menu-close="" ui-sref="home">Constat</ion-item>
+                  <ion-item menu-close="" ui-sref="conseils">Nos conseils</ion-item>
+                  <ion-item menu-close="" ui-sref="assurances">Vos assurances</ion-item>
+                  <ion-item menu-close="" ui-sref="vehicules">Vos v&#xE9;hicules</ion-item>
+                  <ion-item menu-close="" ui-sref="conducteurs">Vos conducteurs</ion-item>
+                  <ion-item menu-close="" ui-sref="about">A Propos</ion-item>
+              </ion-list>
+          </ion-side-menu>
+          <!-- Content + Nav-->
+          <ion-side-menu-content>
+              <!-- Nav -->
+              <ion-nav-bar>
+                  <ion-nav-back-button></ion-nav-back-button>
+                  <ion-nav-buttons side="left">
+                      <buton class="button button-icon button-clear ion-navicon" menu-toggle="left"></buton>
+                  </ion-nav-buttons>
+              </ion-nav-bar>
+              <!-- Content -->
+              <ion-nav-view></ion-nav-view>
+          </ion-side-menu-content>
+
+      </ion-side-menus>
+
+
+
+  </body>
+</html>

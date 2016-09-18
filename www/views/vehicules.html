@@ -1,0 +1,21 @@
+
+
+<ion-view view-title="Véhicules">
+	<ion-content class="padding">
+
+		<h3><img src="img/icon/voiture.png" /><span>Liste</span> des véhicules</h3>
+
+        <p>Pour modifier ou supprimer un véhicule, veuillez le sélectionner.</p>
+
+         
+        <ion-list show-delete="false" can-swipe="true">
+            <ion-item ng-repeat="vehicule in vehicules" ng-click="gotoEdit(vehicule.id)">
+               <p>{{vehicule.marque}} - {{vehicule.modele}}</p>  <ion-option-button class="button-assertive icon ion-trash-a" ng-click="vehiculeRemove(vehicule)"></ion-option-button>
+            </ion-item>
+             <ion-item >
+               <button class="button icon-left ion-android-add"    ui-sref="vehicules_form"> Ajouter</button>
+            </ion-item>
+        </ion-list>
+
+	</ion-content>
+</ion-view>

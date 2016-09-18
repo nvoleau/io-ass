@@ -1,0 +1,45 @@
+
+
+<ion-view view-title="Assurances">
+	<ion-content class="padding">
+		<div class="padding">
+			<h3><img src="img/icon/assurance.png" /><span>Ajouter</span> une assurance</h3>  
+            <p>{{items}}</p>
+
+			<form role="form" class="list" ng-submit="createItem(item)">		       
+                
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Société d’assurance</span>
+                    <input type="text" placeholder="A.G.F" ng-model="item.name" />
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">N° de contrat</span>
+                    <input type="text" placeholder="3.255.395.06 B" ng-model="item.contrat" />
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">N° de carte verte</span>
+                    <input type="text" placeholder="Si différent du N° de contrat" ng-model="item.green" />
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Attestation d’assurance ou carte verte valable </span>
+                    <div> du <input type="date" placeholder="11/11/1977" ng-model="item.DtDu" /> au <input type="date" placeholder="11/11/1977" ng-model="item.DtAu" /></div>
+                </label>
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Agence, bureau, courtier </span>
+                    <input type="text" placeholder="Dupont-Lajoie" ng-model="item.AgName" />
+                </label>
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Adresse</span>
+                    <input type="text" placeholder="rue de l’indépendance 11000 Trifouillis les Oies" ng-model="item.AgAdrr" />
+                </label>
+
+                <button class="button button-block">Enregistrer</button>
+
+            </form>
+
+		</div>
+
+	</ion-content>
+</ion-view>

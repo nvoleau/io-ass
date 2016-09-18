@@ -1,0 +1,19 @@
+<ion-view view-title="Assurances">
+	<ion-content class="padding">
+
+		<h3><img src="img/icon/assurance.png" /><span>Liste</span> des assurances</h3>
+
+		<p>Pour modifier ou supprimer une assurance, veuillez la sélectionner.</p>
+
+        
+        <ion-list show-delete="false" can-swipe="true">
+            <ion-item ng-repeat="assurance in assurances" ng-click="gotoEdit(assurance.id)">
+               <p>{{assurance.name}}</p>  <ion-option-button class="button-assertive icon ion-trash-a" ng-click="assRemove(assurance)"></ion-option-button>
+            </ion-item>
+             <ion-item >
+               <button class="button icon-left ion-android-add"    ui-sref="assurances_form"> Ajouter</button>
+            </ion-item>
+        </ion-list>
+
+	</ion-content>
+</ion-view>

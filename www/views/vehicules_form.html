@@ -1,0 +1,59 @@
+<ion-view view-title="Véhicules">
+	<ion-content class="padding">
+		<div class="padding">
+            <h3><img src="img/icon/voiture.png" /><span>{{titre}}</span> un véhicule</h3>
+
+			<form role="form" class="list" ng-submit='saveVehicule(item)'>		
+                <label class="item item-input item-stacked-label">
+
+                    <span class="input-label">Genre</span>
+                    <div class="radio-medium">
+                        <ion-radio ng-model="item.genre" ng-value="'2R'"><span>Deux roues</span></ion-radio>
+                        <ion-radio ng-model="item.genre" ng-value="'VP'"><span>Voiture particulière</span></ion-radio>
+                        <ion-radio ng-model="item.genre" ng-value="'VU'"><span>Véhicule utilitaire</span></ion-radio>
+                    </div>
+
+                    <br />
+     
+                    <span class="input-label clear">Marque</span>
+                    <input type="text" placeholder="Renault" ng-model="item.marque" />
+
+                    <span class="input-label">Modèle</span>
+                    <input type="text" placeholder="Clio" ng-model="item.modele" />
+
+
+                    <span class="input-label">N° d’immatriculation</span>
+                    <input type="text" placeholder="AA-123-AA" ng-model="item.immat" />
+
+                    <span class="input-label">Pays d’immatriculation</span>
+                    <input type="text" placeholder="France" ng-model="item.pays" />
+
+
+                </label>
+
+                
+                    <button class="button button-block">Enregistrer</button>
+			</form>
+            <!--  ng-submit='AjtVeh(marque,immat,pays)'
+
+                <form role="form" class="list" ng-submit="addVeh()">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Marque, type</span>
+                        <input type="text" placeholder="Renault" ng-model="AjtVeh.marque">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">N° d’immatriculation</span>
+                        <input type="text" placeholder="AA-123-AA" ng-model="AjtVeh.immat">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Pays d’immatriculation</span>
+                        <input type="text" placeholder="France" ng-model="AjtVeh.pays">
+                    </label>
+                    <button class="button button-block button-positive">Enregistrer</button>
+
+                </form>
+    -->
+
+		</div>
+	</ion-content>
+</ion-view>

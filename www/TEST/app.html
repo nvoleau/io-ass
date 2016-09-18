@@ -1,0 +1,27 @@
+﻿<html>
+
+  <head>
+        <script type="text/javascript" src="../lib/angular/angular.js"></script>
+        <script type="text/javascript" src="src/app.js"></script>
+
+
+        <!-- Controllers -->
+        <script type="text/javascript" src="src/controllers/categoryController.js"></script>
+        <script type="text/javascript" src="src/controllers/items.Controller.js"></script>
+
+  </head>
+
+  <body ng-app="collectify">
+      
+      <div ng-controller="itemList">
+
+          <div ng-repeat="item in items">  
+            <p>Item "{{item.name}}" dans la catégorie {{item.category_id}} </p>
+          </div>
+
+      </div>
+
+  </body>
+
+
+</html>
