@@ -37,6 +37,8 @@ app
                     alert(error);
                 });
         }
+        
+        $scope.famille=$rootScope.famille;
 
         //****************************** FIN INIT *******************************
         $scope.goToVehicule = function (assurance) {
@@ -53,6 +55,25 @@ app
             $rootScope.constat.conducteur = conducteur.id;
             console.log($rootScope.constat);
             $state.go('const_circonstances')
+        }
+        
+        $scope.gotoSousFamille = function (idFamille){
+             $rootScope.constat.famille = idFamille;
+              console.log($rootScope.constat);
+              console.log(idFamille+"_circonst");
+              $state.go("1_circonst");
+        }
+        
+        //Affichage des sous famille en fonction du niveau
+        //on regarde si la famille est vide dans le rootscope et 
+        //si c'est pas le cas alors on initialise la sous famille
+        if($rootScope.constat.famille !=""){
+            $scope.sousFamille = $rootScope.sousFamille.filter(function (el) {
+                return el.idFamille == $rootScope.constat.famille;
+                });
+                
+                console.log( $scope.sousFamille);
+             
         }
 
     })
