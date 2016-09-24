@@ -53,15 +53,21 @@ app
 
         $scope.goToCirconstance = function (conducteur) {
             $rootScope.constat.conducteur = conducteur.id;
-            console.log($rootScope.constat);
             $state.go('const_circonstances')
         }
         
+        //******************
         $scope.gotoSousFamille = function (idFamille){
              $rootScope.constat.famille = idFamille;
-              console.log($rootScope.constat);
-              console.log(idFamille+"_circonst");
-              $state.go("1_circonst");
+              // attention si ID = 2 ou 4 ou 7 alors on doit aller en dessous
+              if(idFamille==1 || idFamille==3 || idFamille==5 || idFamille==6){
+                $state.go("1_circonst");
+                   
+              }else{
+                $rootScope.constat.sousFamille=idFamille
+                $state.go("2_circonst");  
+                
+              }
         }
         
         //Affichage des sous famille en fonction du niveau
@@ -71,10 +77,29 @@ app
             $scope.sousFamille = $rootScope.sousFamille.filter(function (el) {
                 return el.idFamille == $rootScope.constat.famille;
                 });
-                
-                console.log( $scope.sousFamille);
-             
         }
+        
+        //*********************
+        
+         $scope.gotoAllCirconstance = function(idSousFamille){
+            $rootScope.constat.sousFamille=idSousFamille
+            $state.go("2_circonst"); 
+         }
+         
+         //init de la vue des circonstances
+         if( $rootScope.constat.sousFamille !=""){
+             $scope.circonstances = $rootScope.circonstance.filter(function (el) {
+                return el.idSousFamille == $rootScope.constat.sousFamille;
+                });
+         }
+        
+        
+        $scope.gotoConstat = function(constat){
+            $rootScope.constat.ficheAccident = constat;
+                $state.go("constat"); 
+        }
+        
+       
 
     })
     ;

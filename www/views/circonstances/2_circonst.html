@@ -1,0 +1,46 @@
+
+
+<ion-view view-title="ConstaMagic - <b>Etape 3</b>">
+	<ion-content class="padding etape">
+
+		<h3><img src="img/icon/constat.png"><span>En stationnement ou à l’arrêt</span> en agglomération</h3>
+		
+		
+	<!--<div class="list card">
+		    
+		    <div class="item item-image" ng-repeat="c in circonstances" >
+		        <button class="button circonst col"   ng-click"gotoConstat(c.ficheAccident)">
+             {{ c.libelle }}</button>
+          <img ng-src="{{ c.url }}">
+          
+        </div>
+        </div>-->
+
+
+    <!-- <div class="row center">>
+         <ion-list ng-repeat="c in circonstances">
+                    <button class="button circonst col" ng-click="gotoConstat(c.ficheAccident)">{{c.libelle}}</button><br><br>
+        </ion-list>
+      <!--  </div>-->
+      
+      
+<!--<ion-list ng-repeat="c in circonstances">
+    
+                    <button class="button circonst col" ng-click="gotoConstat(c.ficheAccident)"> {{c.libelle}}</button>
+        </ion-list>-->
+
+
+<div class="list constat">
+   <div class="item item-thumbnail-const item-text-wrap" ng-repeat="c in circonstances" ng-click="gotoConstat(c.ficheAccident)">
+     
+      <img src="{{ c.url }}">
+      <h4><span>{{c.libelle}}</span></h4>
+  
+   </div>
+    
+</div>
+    
+ 
+
+
+</ion-view>

@@ -1,0 +1,47 @@
+<ion-view view-title="ConstaMagic - <b>Le constat</b>">
+	<ion-content class="padding etape">
+
+		<h3><img src="img/icon/constat.png"><span>Le constat</span></h3>
+		
+		
+		<div class="card">
+		  <div class="item item-divider">
+		    Commentaire :
+		  </div>
+		  <div class="item item-text-wrap">
+		    {{fiche.commentaire}}
+		  </div>
+		</div>
+		
+		<div class="card">
+		  <div class="item item-divider">
+		    Cases a cocher en zone 12
+		  </div>
+		  <div class="item item-text-wrap">
+		   	Véhicule A : {{vecA[0].id}} - {{vecA[0].libelle}}
+		
+			Véhicule B :{{fiche.vecB}}
+		  </div>
+		</div>
+
+		
+
+		
+	
+		
+		<p><b>Renseignements complémentaires indispensables à indiquer en zone 14 "Observations"</b></p>
+			<p>Véhicule A :</p><p>{{fiche.obs_a}}</p>
+			<p>Véhicule B :</p><p>{{fiche.obs_b}}</p>
+			
+			<p>NB :</p><p>{{fiche.obs_nota}}</p>
+		
+		
+		<p><b>Croquis de l'accident (exemple) </b></p>
+		<div class="list card">
+		<div class="item item-image">
+		 	<img ng-src="{{image[0].url}}">
+		</div>
+		</div>
+		
+	</ion-content>
+</ion-content>

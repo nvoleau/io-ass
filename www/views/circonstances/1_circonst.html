@@ -4,13 +4,19 @@
 	<ion-content class="padding etape">
 
 		<h3><img src="img/icon/constat.png"><span>Liste</span> des circonstances en stationnement ou à l’arrêt</h3>
-
+<!--
         <p class="center">
             <button class="button circonst" ui-sref="1-1-1_accident"> En agglomération </button>
             <button class="button circonst" ui-sref=""> Hors agglomération</button><br />
             <button class="button circonst" ui-sref=""> Le véhicule quitte un stationnement ouverture portière  </button>
             <button class="button circonst" ui-sref=""> Véhicule prend un stationnement </button>
         </p>
+        -->
+         <div>
+         <ion-list ng-repeat="sf in sousFamille">
+                    <button class="button circonst col" ng-click="gotoAllCirconstance(sf.id)">{{sf.libelle}}</button>
+        </ion-list>
+        </div>
 
 
 
