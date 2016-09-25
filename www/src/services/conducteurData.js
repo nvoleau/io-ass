@@ -13,7 +13,7 @@ app.service('conducteurData', function ($q, $ionicPlatform, $cordovaSQLite,$root
     }
  
    function useSqlLite() {
-      db = $cordovaSQLite.openDB({name: dbName})
+      db = $cordovaSQLite.openDB({name: dbName, location:'default'})
       console.info('Using SQLITE')
     }
  

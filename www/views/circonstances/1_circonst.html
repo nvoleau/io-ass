@@ -14,7 +14,11 @@
         -->
          <div>
          <ion-list ng-repeat="sf in sousFamille">
-                    <button class="button circonst col" ng-click="gotoAllCirconstance(sf.id)">{{sf.libelle}}</button>
+                    <div class="row center">
+			            <div class="col col-10"></div>
+                    <button class="button circonst col col-80" ng-click="gotoAllCirconstance(sf.id)">{{sf.libelle}}</button>
+                    <div class="col col-10"></div>
+                    </div>
         </ion-list>
         </div>
 

@@ -7,8 +7,8 @@ angular.module('starter.services', ['ngCordova'])
       console.info('Using webSql')
     }
  
-    function useSqlLite() {
-      db = $cordovaSQLite.openDB({name: dbName})
+    function useSqlLite() { 
+      db = $cordovaSQLite.openDB({name: dbName, location:'default'})
       console.info('Using SQLITE')
     }
  

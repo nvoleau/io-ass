@@ -4,30 +4,35 @@
 		<h3><img src="img/icon/constat.png"><span>Le constat</span></h3>
 		
 		
-		<div class="card">
+	
 		  <div class="item item-divider">
 		    Commentaire :
 		  </div>
-		  <div class="item item-text-wrap">
-		    {{fiche.commentaire}}
+		  <div>
+		   <p> {{fiche.commentaire}}</p>
 		  </div>
-		</div>
-		
-		<div class="card">
+
 		  <div class="item item-divider">
 		    Cases a cocher en zone 12
 		  </div>
-		  <div class="item item-text-wrap">
-		   	Véhicule A : {{vecA[0].id}} - {{vecA[0].libelle}}
-		
-			Véhicule B :{{fiche.vecB}}
+		  <div>
+			<div class="row header">
+          <div class="col col-20">Véh. A</div>
+          <div class="col col-60">Circonstance</div>
+          <div class="col col-20">Véh. B</div>
+        </div>
+
+				<div class="row" ng-repeat="c in circonstances">
+          <div ng-if="c.vecA==true" class="col col-20"><i class="icon ion-ios-close-outline"> {{c.id}}</i></div>
+          <div ng-if="c.vecA==false" class="col col-20"> <i class="icon ion-ios-circle-outline"> {{c.id}}</i></div>
+         
+				  <div class="col col-60">{{c.libelle}}</div>
+          <div ng-if="c.vecB==true" class="col col-20">{{c.id}} <i class="icon ion-ios-close-outline"></i></div>
+          <div ng-if="c.vecB==false" class="col col-20">{{c.id}} <i class="icon ion-ios-circle-outline"></i></div>
+        </div>
+
 		  </div>
-		</div>
-
 		
-
-		
-	
 		
 		<p><b>Renseignements complémentaires indispensables à indiquer en zone 14 "Observations"</b></p>
 			<p>Véhicule A :</p><p>{{fiche.obs_a}}</p>

@@ -24,6 +24,7 @@ ion-view.edito                  { background-color: #a3a3a3 !important;}
 a                               { color:#00bbff; }
 a:hover                         { color:#3cd1ee; }
 h1, h2, h3                      { color:#2093bd;} 
+h4                              { padding-top: 25px;}
 h2 span, h3 span, h4 span       { color:#ffffff;}
 h2 img, h3 img                  { margin-right: 4px;}
 p                               { text-align:justify; color:#e8e8e8;} 
@@ -84,6 +85,10 @@ ion-view .etape h4 span              { color:#ffffff; margin-left:35%; font-size
   color:#2093bd!important;
 }
 
+.col {color:white;}
+
+.alignCenter {text-align:center;}
+
 /* button
 ==================================*/
 ion-content .button,
@@ -109,7 +114,7 @@ ion-content .buttonA:hover      { background:url('../img/commencer.png') no-repe
 ion-content .buttonC            { width:252px; height:66px; background:url('../img/conseils.png') no-repeat 0 0;border-width: 0px; margin: 5px 5px 5px 5px  !important;}
 ion-content .buttonC:hover      { background:url('../img/conseils.png') no-repeat 0 -66px;}
 
-ion-content .circonst           { padding: 0 20px; width: 200px; height: 200px; font-size:1.5em; line-height: 1.5em; min-width: 52px; min-height: 47px; margin: 6px 2px; }
+ion-content .circonst           { padding: 0 20px; width: 100px; height: 100px; font-size:1.5em; line-height: 1.5em; min-width: 52px; min-height: 47px; margin: 6px 2px; }
 
  
 /* form

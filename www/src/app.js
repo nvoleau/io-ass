@@ -216,13 +216,35 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         templateUrl: 'views/circonstances/2_circonst.html',
         controller: 'constatForm',
     })
-    $urlRouterProvider.otherwise('/home')
     
+    $stateProvider.state('vehiculeA', {
+        url: '/vehiculeA',
+        templateUrl: 'views/circonstances/choixVecA.html',
+        controller: 'vehiculeAccident',
+    })
+     $stateProvider.state('vehiculeB', {
+        url: '/vehiculeB',
+        templateUrl: 'views/circonstances/choixVecB.html',
+        controller: 'vehiculeAccident',
+    })
+
+     $stateProvider.state('chocA', {
+        url: '/ChocA',
+        templateUrl: 'views/circonstances/chocA.html',
+        controller: 'vehiculeAccident',
+    })
+     $stateProvider.state('chocB', {
+        url: '/ChocB',
+        templateUrl: 'views/circonstances/chocB.html',
+        controller: 'vehiculeAccident',
+    })
+
      $stateProvider.state('constat', {
         url: '/constat',
         templateUrl: 'views/circonstances/constat.html',
         controller: 'constatCompletForm',
     })
+    
     $urlRouterProvider.otherwise('/home')
 
 });

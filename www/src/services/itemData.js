@@ -17,7 +17,7 @@ app.service('itemData', function ($q, $ionicPlatform, $cordovaSQLite,$rootScope)
     }
  
    function useSqlLite() {
-      db = $cordovaSQLite.openDB({name: dbName})
+      db = $cordovaSQLite.openDB({name: dbName, location:'default'})
       console.info('Using SQLITE')
     }
  

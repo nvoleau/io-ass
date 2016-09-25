@@ -94,10 +94,12 @@ app
          }
         
         
-        $scope.gotoConstat = function(constat){
+
+        $scope.gotoVehiculeA = function(constat){
             $rootScope.constat.ficheAccident = constat;
-                $state.go("constat"); 
+                $state.go("vehiculeA"); 
         }
+       
         
        
 
