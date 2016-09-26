@@ -57,7 +57,11 @@ app
  
         }
         
-
+        
+            $scope.vecA = $rootScope.constat.vehiculeA;
+            $scope.vecB = $rootScope.constat.vehiculeB;
+            $scope.chocA = $rootScope.constat.choc_vehiculeA;
+            $scope.chocB = $rootScope.constat.choc_vehiculeB;
        
         
       

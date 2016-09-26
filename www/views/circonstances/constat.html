@@ -1,5 +1,5 @@
 <ion-view view-title="ConstaMagic - <b>Le constat</b>">
-	<ion-content class="padding etape">
+	<ion-content class="padding homelogo">
 
 		<h3><img src="img/icon/constat.png"><span>Le constat</span></h3>
 		
@@ -17,9 +17,9 @@
 		  </div>
 		  <div>
 			<div class="row header">
-          <div class="col col-20">Véh. A</div>
-          <div class="col col-60">Circonstance</div>
-          <div class="col col-20">Véh. B</div>
+          <div class="col col-20 item item-divider">Véh. A</div>
+          <div class="col col-60 item item-divider">Circonstance</div>
+          <div class="col col-20 item item-divider">Véh. B</div>
         </div>
 
 				<div class="row" ng-repeat="c in circonstances">
@@ -34,14 +34,190 @@
 		  </div>
 		
 		
-		<p><b>Renseignements complémentaires indispensables à indiquer en zone 14 "Observations"</b></p>
+		 <div class="item item-divider">Renseignements complémentaires indispensables à indiquer en zone 14 "Observations"</div>
 			<p>Véhicule A :</p><p>{{fiche.obs_a}}</p>
 			<p>Véhicule B :</p><p>{{fiche.obs_b}}</p>
 			
 			<p>NB :</p><p>{{fiche.obs_nota}}</p>
 		
 		
-		<p><b>Croquis de l'accident (exemple) </b></p>
+		 <div class="item item-divider">16 - Véhicule A</div>
+		
+		<div ng-if="vecA=='voiture'">
+			<div class="row">
+				<div class="col col-25 alignCenter"><img src="img/haut_gauche_w.png" ng-if="chocA==1"/></div>
+				<div class="col col-50 alignCenter"><img src="img/haut_w.png" ng-if="chocA==2"></div>
+				<div class="col col-25 alignCenter"><img src="img/haut_droite_w.png" ng-if="chocA==3"></div>
+			</div>
+
+			<div class="row">
+				<div class="col col-25" style="text-align:right">
+					<div><img src="img/gauche_w.png" ng-if="chocA==4"></div>
+					<div><img src="img/gauche_w.png" ng-if="chocA==5"></div>
+					<div><img src="img/gauche_w.png" ng-if="chocA==6"></div>
+				</div>
+				<div class="item col col-50 alignCenter">
+					<img style="width: 75px;" src="img/voiture_B.png">
+				</div>
+				<div class="col col-25" style="text-align:left">
+					<div><img src="img/droite_b.png" ng-if="chocA==7"></div>
+					<div><img src="img/droite_b.png" ng-if="chocA==8"></div>
+					<div><img src="img/droite_b.png" ng-if="chocA==9"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-25 alignCenter"><img src="img/bas_gauche_w.png" ng-if="chocA==10"></div>
+				<div class="col col-50 alignCenter"><img src="img/bas_w.png" ng-if="chocA==11"></div>
+				<div class="col col-25 alignCenter"><img src="img/bas_droite_w.png" ng-if="chocA==12"></div>
+			</div>
+		</div>
+		
+		<div ng-if="vecA=='moto'">
+			<div class="row">
+				<div class="col col-25 alignCenter"><img src="img/haut_gauche_w.png" ng-if="chocA==1"/></div>
+				<div class="col col-50 alignCenter"><img src="img/haut_w.png" ng-if="chocA==2"></div>
+				<div class="col col-25 alignCenter"><img src="img/haut_droite_w.png" ng-if="chocA==3"></div>
+			</div>
+
+			<div class="row">
+				<div class="col col-25" style="text-align:right">
+					<div><img src="img/gauche_w.png" ng-if="chocA==4"></div>
+					<div><img src="img/gauche_w.png" ng-if="chocA==5"></div>
+					<div><img src="img/gauche_w.png" ng-if="chocA==6"></div>
+				</div>
+				<div class="item col col-50 alignCenter">
+					<img style="width: 75px;" src="img/moto_B.png">
+				</div>
+				<div class="col col-25" style="text-align:left">
+					<div><img src="img/droite_b.png" ng-if="chocA==7"></div>
+					<div><img src="img/droite_b.png" ng-if="chocA==8"></div>
+					<div><img src="img/droite_b.png" ng-if="chocA==9"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-25 alignCenter"><img src="img/bas_gauche_w.png" ng-if="chocA==10"></div>
+				<div class="col col-50 alignCenter"><img src="img/bas_w.png" ng-if="chocA==11"></div>
+				<div class="col col-25 alignCenter"><img src="img/bas_droite_w.png" ng-if="chocA==12"></div>
+			</div>
+		</div>
+		<div ng-if="vecA=='utilitaire'">
+			<div class="row">
+				<div class="col col-25 alignCenter"><img src="img/haut_gauche_w.png" ng-if="chocA==1"/></div>
+				<div class="col col-50 alignCenter"><img src="img/haut_w.png" ng-if="chocA==2"></div>
+				<div class="col col-25 alignCenter"><img src="img/haut_droite_w.png" ng-if="chocA==3"></div>
+			</div>
+
+			<div class="row">
+				<div class="col col-25" style="text-align:right">
+					<div><img src="img/gauche_w.png" ng-if="chocA==4"></div>
+					<div><img src="img/gauche_w.png" ng-if="chocA==5"></div>
+					<div><img src="img/gauche_w.png" ng-if="chocA==6"></div>
+				</div>
+				<div class="item col col-50 alignCenter">
+					<img style="width: 75px;" src="img/utilitaire_B.png">
+				</div>
+				<div class="col col-25" style="text-align:left">
+					<div><img src="img/droite_b.png" ng-if="chocA==7"></div>
+					<div><img src="img/droite_b.png" ng-if="chocA==8"></div>
+					<div><img src="img/droite_b.png" ng-if="chocA==9"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-25 alignCenter"><img src="img/bas_gauche_w.png" ng-if="chocA==10"></div>
+				<div class="col col-50 alignCenter"><img src="img/bas_w.png" ng-if="chocA==11"></div>
+				<div class="col col-25 alignCenter"><img src="img/bas_droite_w.png" ng-if="chocA==12"></div>
+			</div>
+		</div>
+		
+		<div class="item item-divider">16 - Véhicule B</div>
+		
+		<div ng-if="vecB=='voiture'">
+			<div class="row">
+				<div class="col col-25 alignCenter"><img src="img/haut_gauche_w.png" ng-if="chocB==1"/></div>
+				<div class="col col-50 alignCenter"><img src="img/haut_w.png" ng-if="chocB==2"></div>
+				<div class="col col-25 alignCenter"><img src="img/haut_droite_w.png" ng-if="chocB==3"></div>
+			</div>
+
+			<div class="row">
+				<div class="col col-25" style="text-align:right">
+					<div><img src="img/gauche_w.png" ng-if="chocB==4"></div>
+					<div><img src="img/gauche_w.png" ng-if="chocB==5"></div>
+					<div><img src="img/gauche_w.png" ng-if="chocB==6"></div>
+				</div>
+				<div class="item col col-50 alignCenter">
+					<img style="width: 75px;" src="img/voiture_B.png">
+				</div>
+				<div class="col col-25" style="text-align:left">
+					<div><img src="img/droite_b.png" ng-if="chocB==7"></div>
+					<div><img src="img/droite_b.png" ng-if="chocB==8"></div>
+					<div><img src="img/droite_b.png" ng-if="chocB==9"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-25 alignCenter"><img src="img/bas_gauche_w.png" ng-if="chocB==10"></div>
+				<div class="col col-50 alignCenter"><img src="img/bas_w.png" ng-if="chocB==11"></div>
+				<div class="col col-25 alignCenter"><img src="img/bas_droite_w.png" ng-if="chocB==12"></div>
+			</div>
+		</div>
+		
+		<div ng-if="vecB=='moto'">
+			<div class="row">
+				<div class="col col-25 alignCenter"><img src="img/haut_gauche_w.png" ng-if="chocB==1"/></div>
+				<div class="col col-50 alignCenter"><img src="img/haut_w.png" ng-if="chocB==2"></div>
+				<div class="col col-25 alignCenter"><img src="img/haut_droite_w.png" ng-if="chocB==3"></div>
+			</div>
+
+			<div class="row">
+				<div class="col col-25" style="text-align:right">
+					<div><img src="img/gauche_w.png" ng-if="chocB==4"></div>
+					<div><img src="img/gauche_w.png" ng-if="chocB==5"></div>
+					<div><img src="img/gauche_w.png" ng-if="chocB==6"></div>
+				</div>
+				<div class="item col col-50 alignCenter">
+					<img style="width: 75px;" src="img/moto_B.png">
+				</div>
+				<div class="col col-25" style="text-align:left">
+					<div><img src="img/droite_b.png" ng-if="chocB==7"></div>
+					<div><img src="img/droite_b.png" ng-if="chocB==8"></div>
+					<div><img src="img/droite_b.png" ng-if="chocB==9"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-25 alignCenter"><img src="img/bas_gauche_w.png" ng-if="chocB==10"></div>
+				<div class="col col-50 alignCenter"><img src="img/bas_w.png" ng-if="chocB==11"></div>
+				<div class="col col-25 alignCenter"><img src="img/bas_droite_w.png" ng-if="chocB==12"></div>
+			</div>
+		</div>
+		<div ng-if="vecB=='utilitaire'">
+			<div class="row">
+				<div class="col col-25 alignCenter"><img src="img/haut_gauche_w.png" ng-if="chocB==1"/></div>
+				<div class="col col-50 alignCenter"><img src="img/haut_w.png" ng-if="chocB==2"></div>
+				<div class="col col-25 alignCenter"><img src="img/haut_droite_w.png" ng-if="chocB==3"></div>
+			</div>
+
+			<div class="row">
+				<div class="col col-25" style="text-align:right">
+					<div><img src="img/gauche_w.png" ng-if="chocB==4"></div>
+					<div><img src="img/gauche_w.png" ng-if="chocB==5"></div>
+					<div><img src="img/gauche_w.png" ng-if="chocB==6"></div>
+				</div>
+				<div class="item col col-50 alignCenter">
+					<img style="width: 75px;" src="img/utilitaire_B.png">
+				</div>
+				<div class="col col-25" style="text-align:left">
+					<div><img src="img/droite_b.png" ng-if="chocB==7"></div>
+					<div><img src="img/droite_b.png" ng-if="chocB==8"></div>
+					<div><img src="img/droite_b.png" ng-if="chocB==9"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-25 alignCenter"><img src="img/bas_gauche_w.png" ng-if="chocB==10"></div>
+				<div class="col col-50 alignCenter"><img src="img/bas_w.png" ng-if="chocB==11"></div>
+				<div class="col col-25 alignCenter"><img src="img/bas_droite_w.png" ng-if="chocB==12"></div>
+			</div>
+		</div>
+		
+		 <div class="item item-divider">Croquis de l'accident (exemple) </div>
 		<div class="list card">
 		<div class="item item-image">
 		 	<img ng-src="{{image[0].url}}">

@@ -7,52 +7,90 @@
 			Toucher l'endroit du choc sur le véhicule B
 		</div>
 
-		<div class="row">
-  			<div class="col col-25 alignCenter" ng-click="setChocVecB(1)">1</div>
-  			<div class="col col-50 alignCenter" ng-click="setChocVecB(2)">2</div>
-			<div class="col col-25 alignCenter" ng-click="setChocVecB(3)">3</div>
+		<div ng-if="vecB=='voiture'">
+			<div class="row">
+				<div class="col col-25 alignCenter" ng-click="setChocVecB(1)"><img src="img/haut_gauche_w.png" onmouseover="this.src='img/haut_gauche_b.png'" onmouseout="this.src='img/haut_gauche_w.png'" /></div>
+				<div class="col col-50 alignCenter" ng-click="setChocVecB(2)"><img src="img/haut_w.png"></div>
+				<div class="col col-25 alignCenter" ng-click="setChocVecB(3)"><img src="img/haut_droite_w.png"></div>
+			</div>
+
+			<div class="row">
+				<div class="col col-25" style="text-align:right">
+					<div ng-click="setChocVecB(4)"><img src="img/gauche_w.png"></div>
+					<div ng-click="setChocVecB(5)"><img src="img/gauche_w.png"></div>
+					<div ng-click="setChocVecB(6)"><img src="img/gauche_w.png"></div>
+				</div>
+				<div class="item col col-50 alignCenter">
+					<img style="width: 75px;" src="img/voiture_B.png">
+				</div>
+				<div class="col col-25" style="text-align:left">
+					<div item ng-click="setChocVecB(7)"><img src="img/droite_b.png"></div>
+					<div ng-click="setChocVecB(8)"><img src="img/droite_b.png"></div>
+					<div ng-click="setChocVecB(8)"><img src="img/droite_b.png"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-25 alignCenter" ng-click="setChocVecB(10)"><img src="img/bas_gauche_w.png"></div>
+				<div class="col col-50 alignCenter" ng-click="setChocVecB(11)"><img src="img/bas_w.png"></div>
+				<div class="col col-25 alignCenter" ng-click="setChocVecB(12)"><img src="img/bas_droite_w.png"></div>
+			</div>
+
 		</div>
 
+		<div ng-if="vecB=='moto'">
 		<div class="row">
-			<div class="col col-25" style="text-align:right">
-				<div ng-click="setChocVecB(4)"><img src="img/arrow-droite.png">4</div>
-				<div ng-click="setChocVecB(5)"><img src="img/arrow-droite.png">5</div>
-				<div ng-click="setChocVecB(6)"><img src="img/arrow-droite.png">6</div>
+				<div class="col col-25 alignCenter" ng-click="setChocVecB(1)"></div>
+				<div class="col col-50 alignCenter" ng-click="setChocVecB(2)"><img src="img/haut_w.png"></div>
+				<div class="col col-25 alignCenter" ng-click="setChocVecB(3)"></div>
 			</div>
-			<div class="item col col-50 alignCenter">
-				<img style="width: 75px;" src="img/voiture_B.png">
-			</div>
-			<div class="col col-25" style="text-align:left">
-				<div item ng-click="setChocVecB(7)"><img src="img/arrow-droite.png">7</div>
-				<div ng-click="setChocVecB(8)"><img src="img/arrow-droite.png">8</div>
-				<div ng-click="setChocVecB(8)"><img src="img/arrow-droite.png">9</div>
-			</div>
-		</div>
-		<div class="row">
-  			<div class="col col-25 alignCenter" ng-click="setChocVecB(10)">10</div>
-  			<div class="col col-50 alignCenter" ng-click="setChocVecB(11)">11</div>
-			<div class="col col-25 alignCenter" ng-click="setChocVecB(12)">12</div>
-		</div>
-		
-		
-		
-		
-		<div class="row">
-			<div class="col col-10"></div>
-			<div class="item col col-80 alignCenter" ng-click="gotoChocVecA('moto')">
-				<img style="width: 75px;" src="img/moto_B.png">
-			</div>
-			<div class="col col-10"></div>
-		</div>
-		<div class="row">
-			<div class="col col-10"></div>
-			<div class="item col col-80 alignCenter" ng-click="gotoChocVecA('utilitaire')">
-				<img style="width: 75px;" src="img/utilitaire_B.png">
-			</div>
-			<div class="col col-10"></div>
-		</div>
 
+			<div class="row">
+				<div class="col col-25" style="text-align:right">
+					<div ng-click="setChocVecB(4)"><img src="img/gauche_w.png"></div>
+					<div ng-click="setChocVecB(5)"><img src="img/gauche_w.png"></div>
+					<div ng-click="setChocVecB(6)"><img src="img/gauche_w.png"></div>
+				</div>
+				<div class="item col col-50 alignCenter">
+					<img style="width: 75px;" src="img/moto_B.png">
+				</div>
+				<div class="col col-25" style="text-align:left">
+					<div item ng-click="setChocVecB(7)"><img src="img/droite_b.png"></div>
+					<div ng-click="setChocVecB(8)"><img src="img/droite_b.png"></div>
+					<div ng-click="setChocVecB(8)"><img src="img/droite_b.png"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-25 alignCenter" ng-click="setChocVecB(10)"></div>
+				<div class="col col-50 alignCenter" ng-click="setChocVecB(11)"><img src="img/bas_w.png"></div>
+				<div class="col col-25 alignCenter" ng-click="setChocVecB(12)"></div>
+			</div>
+		</div>
+		<div ng-if="vecB=='utilitaire'">
+			<div class="row">
+				<div class="col col-25 alignCenter" ng-click="setChocVecB(1)"><img src="img/haut_gauche_w.png" onmouseover="this.src='img/haut_gauche_b.png'" onmouseout="this.src='img/haut_gauche_w.png'" /></div>
+				<div class="col col-50 alignCenter" ng-click="setChocVecB(2)"><img src="img/haut_w.png"></div>
+				<div class="col col-25 alignCenter" ng-click="setChocVecB(3)"><img src="img/haut_droite_w.png"></div>
+			</div>
 
-
-	</ion-content>
+			<div class="row">
+				<div class="col col-25" style="text-align:right">
+					<div ng-click="setChocVecB(4)"><img src="img/gauche_w.png"></div>
+					<div ng-click="setChocVecB(5)"><img src="img/gauche_w.png"></div>
+					<div ng-click="setChocVecB(6)"><img src="img/gauche_w.png"></div>
+				</div>
+				<div class="item col col-50 alignCenter">
+					<img style="width: 75px;" src="img/utilitaire_B.png">
+				</div>
+				<div class="col col-25" style="text-align:left">
+					<div item ng-click="setChocVecB(7)"><img src="img/droite_b.png"></div>
+					<div ng-click="setChocVecB(8)"><img src="img/droite_b.png"></div>
+					<div ng-click="setChocVecB(8)"><img src="img/droite_b.png"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-25 alignCenter" ng-click="setChocVecB(10)"><img src="img/bas_gauche_w.png"></div>
+				<div class="col col-50 alignCenter" ng-click="setChocVecB(11)"><img src="img/bas_w.png"></div>
+				<div class="col col-25 alignCenter" ng-click="setChocVecB(12)"><img src="img/bas_droite_w.png"></div>
+			</div>
+		</div>
 	</ion-content>
