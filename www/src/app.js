@@ -14,6 +14,7 @@ app.run(function ($ionicPlatform, $rootScope) {
         $rootScope.conducteurs = [];
         $rootScope.vehicules = [];
         $rootScope.constat ={}
+        $rootScope.constats = [];
         
         $rootScope.famille = [
                 {id : 1, libelle : "En stationnnement ou à l'arrêt"},
@@ -181,6 +182,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     })
 
     ///////////////////////////////////////////// CONSTAT
+     $stateProvider.state('constats', {
+        url: '/constats',
+        templateUrl: 'views/constats.html',
+        controller: 'constatList'
+    })
+
     $stateProvider.state('const_assurances', {
         url: '/const_assurances',
         templateUrl: 'views/const_assurances.html',
@@ -243,6 +250,9 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         url: '/constat',
         templateUrl: 'views/circonstances/constat.html',
         controller: 'constatCompletForm',
+         params: {
+            id: { value: null },
+        },
     })
     
     $urlRouterProvider.otherwise('/home')

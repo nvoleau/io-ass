@@ -1,51 +1,58 @@
 <ion-view view-title="ConstaMagic - <b>Le constat</b>">
-	<ion-content class="padding homelogo">
+	<ion-content class="padding etape">
 
 		<h3><img src="img/icon/constat.png"><span>Le constat</span></h3>
-		
-		
-	
-		  <div class="item item-divider">
-		    Commentaire :
-		  </div>
-		  <div>
-		   <p> {{fiche.commentaire}}</p>
-		  </div>
 
-		  <div class="item item-divider">
-		    Cases a cocher en zone 12
-		  </div>
-		  <div>
+
+
+		<div class="item item-divider">
+			Date du constat : {{date_constat}}
+		</div>
+
+		<div class="item item-divider">
+			Commentaire :
+		</div>
+		<div>
+			<p> {{fiche.commentaire}}</p>
+		</div>
+
+		<div class="item item-divider">
+			Cases a cocher en zone 12
+		</div>
+		<div>
 			<div class="row header">
-          <div class="col col-20 item item-divider">Véh. A</div>
-          <div class="col col-60 item item-divider">Circonstance</div>
-          <div class="col col-20 item item-divider">Véh. B</div>
-        </div>
+				<div class="col col-20 item item-divider">Véh. A</div>
+				<div class="col col-60 item item-divider">Circonstance</div>
+				<div class="col col-20 item item-divider">Véh. B</div>
+			</div>
 
-				<div class="row" ng-repeat="c in circonstances">
-          <div ng-if="c.vecA==true" class="col col-20"><i class="icon ion-ios-close-outline"> {{c.id}}</i></div>
-          <div ng-if="c.vecA==false" class="col col-20"> <i class="icon ion-ios-circle-outline"> {{c.id}}</i></div>
-         
-				  <div class="col col-60">{{c.libelle}}</div>
-          <div ng-if="c.vecB==true" class="col col-20">{{c.id}} <i class="icon ion-ios-close-outline"></i></div>
-          <div ng-if="c.vecB==false" class="col col-20">{{c.id}} <i class="icon ion-ios-circle-outline"></i></div>
-        </div>
+			<div class="row" ng-repeat="c in circonstances">
+				<div ng-if="c.vecA==true" class="col col-20"><i class="icon ion-ios-close-outline"> {{c.id}}</i></div>
+				<div ng-if="c.vecA==false" class="col col-20"> <i class="icon ion-ios-circle-outline"> {{c.id}}</i></div>
 
-		  </div>
-		
-		
-		 <div class="item item-divider">Renseignements complémentaires indispensables à indiquer en zone 14 "Observations"</div>
-			<p>Véhicule A :</p><p>{{fiche.obs_a}}</p>
-			<p>Véhicule B :</p><p>{{fiche.obs_b}}</p>
-			
-			<p>NB :</p><p>{{fiche.obs_nota}}</p>
-		
-		
-		 <div class="item item-divider">16 - Véhicule A</div>
-		
+				<div class="col col-60">{{c.libelle}}</div>
+				<div ng-if="c.vecB==true" class="col col-20">{{c.id}} <i class="icon ion-ios-close-outline"></i></div>
+				<div ng-if="c.vecB==false" class="col col-20">{{c.id}} <i class="icon ion-ios-circle-outline"></i></div>
+			</div>
+
+		</div>
+
+
+		<div class="item item-divider">Renseignements complémentaires indispensables à indiquer en zone 14 "Observations"</div>
+		<p>Véhicule A :</p>
+		<p>{{fiche.obs_a}}</p>
+		<p>Véhicule B :</p>
+		<p>{{fiche.obs_b}}</p>
+
+		<p>NB :</p>
+		<p>{{fiche.obs_nota}}</p>
+
+
+		<div class="item item-divider">16 - Véhicule A</div>
+
 		<div ng-if="vecA=='voiture'">
 			<div class="row">
-				<div class="col col-25 alignCenter"><img src="img/haut_gauche_w.png" ng-if="chocA==1"/></div>
+				<div class="col col-25 alignCenter"><img src="img/haut_gauche_w.png" ng-if="chocA==1" /></div>
 				<div class="col col-50 alignCenter"><img src="img/haut_w.png" ng-if="chocA==2"></div>
 				<div class="col col-25 alignCenter"><img src="img/haut_droite_w.png" ng-if="chocA==3"></div>
 			</div>
@@ -71,10 +78,10 @@
 				<div class="col col-25 alignCenter"><img src="img/bas_droite_w.png" ng-if="chocA==12"></div>
 			</div>
 		</div>
-		
+
 		<div ng-if="vecA=='moto'">
 			<div class="row">
-				<div class="col col-25 alignCenter"><img src="img/haut_gauche_w.png" ng-if="chocA==1"/></div>
+				<div class="col col-25 alignCenter"><img src="img/haut_gauche_w.png" ng-if="chocA==1" /></div>
 				<div class="col col-50 alignCenter"><img src="img/haut_w.png" ng-if="chocA==2"></div>
 				<div class="col col-25 alignCenter"><img src="img/haut_droite_w.png" ng-if="chocA==3"></div>
 			</div>
@@ -102,7 +109,7 @@
 		</div>
 		<div ng-if="vecA=='utilitaire'">
 			<div class="row">
-				<div class="col col-25 alignCenter"><img src="img/haut_gauche_w.png" ng-if="chocA==1"/></div>
+				<div class="col col-25 alignCenter"><img src="img/haut_gauche_w.png" ng-if="chocA==1" /></div>
 				<div class="col col-50 alignCenter"><img src="img/haut_w.png" ng-if="chocA==2"></div>
 				<div class="col col-25 alignCenter"><img src="img/haut_droite_w.png" ng-if="chocA==3"></div>
 			</div>
@@ -128,12 +135,12 @@
 				<div class="col col-25 alignCenter"><img src="img/bas_droite_w.png" ng-if="chocA==12"></div>
 			</div>
 		</div>
-		
+
 		<div class="item item-divider">16 - Véhicule B</div>
-		
+
 		<div ng-if="vecB=='voiture'">
 			<div class="row">
-				<div class="col col-25 alignCenter"><img src="img/haut_gauche_w.png" ng-if="chocB==1"/></div>
+				<div class="col col-25 alignCenter"><img src="img/haut_gauche_w.png" ng-if="chocB==1" /></div>
 				<div class="col col-50 alignCenter"><img src="img/haut_w.png" ng-if="chocB==2"></div>
 				<div class="col col-25 alignCenter"><img src="img/haut_droite_w.png" ng-if="chocB==3"></div>
 			</div>
@@ -159,10 +166,10 @@
 				<div class="col col-25 alignCenter"><img src="img/bas_droite_w.png" ng-if="chocB==12"></div>
 			</div>
 		</div>
-		
+
 		<div ng-if="vecB=='moto'">
 			<div class="row">
-				<div class="col col-25 alignCenter"><img src="img/haut_gauche_w.png" ng-if="chocB==1"/></div>
+				<div class="col col-25 alignCenter"><img src="img/haut_gauche_w.png" ng-if="chocB==1" /></div>
 				<div class="col col-50 alignCenter"><img src="img/haut_w.png" ng-if="chocB==2"></div>
 				<div class="col col-25 alignCenter"><img src="img/haut_droite_w.png" ng-if="chocB==3"></div>
 			</div>
@@ -190,7 +197,7 @@
 		</div>
 		<div ng-if="vecB=='utilitaire'">
 			<div class="row">
-				<div class="col col-25 alignCenter"><img src="img/haut_gauche_w.png" ng-if="chocB==1"/></div>
+				<div class="col col-25 alignCenter"><img src="img/haut_gauche_w.png" ng-if="chocB==1" /></div>
 				<div class="col col-50 alignCenter"><img src="img/haut_w.png" ng-if="chocB==2"></div>
 				<div class="col col-25 alignCenter"><img src="img/haut_droite_w.png" ng-if="chocB==3"></div>
 			</div>
@@ -216,13 +223,13 @@
 				<div class="col col-25 alignCenter"><img src="img/bas_droite_w.png" ng-if="chocB==12"></div>
 			</div>
 		</div>
-		
-		 <div class="item item-divider">Croquis de l'accident (exemple) </div>
+
+		<div class="item item-divider">Croquis de l'accident (exemple) </div>
 		<div class="list card">
-		<div class="item item-image">
-		 	<img ng-src="{{image[0].url}}">
+			<div class="item item-image">
+				<img ng-src="{{image[0].url}}">
+			</div>
 		</div>
-		</div>
-		
+
 	</ion-content>
-</ion-content>
+	</ion-content>

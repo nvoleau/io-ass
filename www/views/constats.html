@@ -1,0 +1,18 @@
+
+
+<ion-view view-title="Constats">
+	<ion-content class="padding">
+
+		<h3><img src="img/icon/permis.png" /><span>Liste</span> de vos constats</h3>
+
+        <p>Pour modifier ou supprimer un constat, veuillez le sélectionner.</p>
+
+        <ion-list show-delete="false" can-swipe="true">
+            <ion-item ng-repeat="c in constats" ng-click="gotoEdit(c.id)">
+               <p>{{c.date_constat}} : {{c.vehiculeA}} contre {{c.vehiculeB}}</p>  <ion-option-button class="button-assertive icon ion-trash-a" ng-click="constatRemove(c)"></ion-option-button>
+            </ion-item>
+        </ion-list>
+
+
+	</ion-content>
+</ion-view>
