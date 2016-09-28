@@ -48,7 +48,7 @@ ion-view .blk ul               { padding-left:18px}
 ion-view .blk li               { border-bottom: 1px solid #ccc; padding-bottom:6px; margin-bottom:12px;}
 
 ion-view .etape h3              { text-align:center; width:100%;} 
-ion-view .etape h4 span              { color:#ffffff; margin-left:35%; font-size: 16px; line-height: 20px; white-space: initial; display:flex;} 
+ion-view .etape h4 span              { color:#ffffff; margin-left:35%; font-size: 16px; line-height: 20px; white-space: initial; display:flex;font-size: 1.4em;line-height: 1.4em;} 
 
 
 .item-thumbnail-const,
@@ -96,7 +96,7 @@ ion-content .button.active,
 ion-content .button.activated  { background-color:#2093bd; color:#ffffff;} 
 ion-content .button:hover      { background-color:#08a4dd; color:#ffffff;} 
 
-ion-content p.homebar          { margin-top:20px; display:block;} 
+ion-content p.homebar          { margin-top:5px; display:block;} 
 ion-content .buttonH           { border-color: transparent; background-color: #f8f8f8;
   color: #444; position: relative; display: inline-block; margin: 4px 2px; padding: 0 8px;
   min-width: 52px; min-height: 47px;  border-width: 1px; border-style: solid; border-radius: 4px;
@@ -114,7 +114,7 @@ ion-content .buttonA:hover      { background:url('../img/commencer.png') no-repe
 ion-content .buttonC            { width:252px; height:66px; background:url('../img/conseils.png') no-repeat 0 0;border-width: 0px; margin: 5px 5px 5px 5px  !important;}
 ion-content .buttonC:hover      { background:url('../img/conseils.png') no-repeat 0 -66px;}
 
-ion-content .circonst           { padding: 0 20px; width: 100px; height: 100px; font-size:1.5em; line-height: 1.5em; min-width: 52px; min-height: 47px; margin: 6px 2px; }
+ion-content .circonst           { padding: 0 15px; width: 100px; height: 100px; font-size:1.4em; line-height: 1.4em; min-width: 52px; min-height: 47px; margin: 6px 2px; }
 
  
 /* form
@@ -146,7 +146,7 @@ ion-content .item-content       { background: no-repeat #1c1f22   !important; co
 .radio-medium .radio-icon       { padding: 8px 14px; }
 
 
-.constat                        {background-color: #2093bd;}
+.constat                        {}
 
 .constat .p                     {color: #ffffff;}
 .item-left h2,.item-left h3 {
@@ -160,8 +160,14 @@ ion-content .item-content       { background: no-repeat #1c1f22   !important; co
 ==================================*/
 
 .homelogo { 
-    background:url('../img/Logo_ConstaMagic.png') no-repeat center 30px  !important; padding-top:280px;
+    background:url('../img/Logo_ConstaMagic.png') no-repeat center 30px  !important; padding-top:200px;
    -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;
 }
 
+.total {border-top : 1px solid white;}
+.titre-tb {border-bottom : 1px solid white; margin-bottom: 10px;}
+.tb-left {border-left : 1px solid;}
+.tb-right {border-right : 1px solid;}
+
+.constat-divider {background-color: #2093bd!important; color: white !important;width: 100%; margin-bottom: 5px!important; padding: 5px!important;}
 

@@ -3,16 +3,18 @@
 
 
 app
-    .controller('constatCompletForm', function ($scope, $state, $rootScope, $stateParams, constatData) {
+    .controller('constatCompletForm', function ($scope, $state, $rootScope, $stateParams, $ionicHistory,$ionicSideMenuDelegate, constatData) {
 
+$scope.enregistrer = 1;
 
+$scope.toggleLeft = function() {
+    $ionicSideMenuDelegate.toggleLeft();
+  };
 
- if ($stateParams.id) {
-       console.log('okookokoko');
+ if ($stateParams.id) { //on vient de la vue initiale
             constatData.getByIdConstat($stateParams.id).then(function (res) {
-                  console.log('resultat');
-                console.log(res);
                 $rootScope.constat = res;
+                $scope.enregistrer = 2;
 
 $scope.date_constat = $rootScope.constat.date_constat;
 //a refaire
@@ -23,8 +25,6 @@ $scope.date_constat = $rootScope.constat.date_constat;
                        
                         if ($rootScope.constat.ficheAccident == $rootScope.ficheAccident[i].id){
                               $scope.fiche = $rootScope.ficheAccident[i];
-                               console.log('******');
-                               console.log($scope.fiche);
                         }
                 }
                 
@@ -87,7 +87,7 @@ $scope.date_constat = $rootScope.constat.date_constat;
             });
  }else{
         
-console.log( $rootScope.constat);
+//console.log( $rootScope.constat);
 
         //init vue fiche
         if($rootScope.constat.ficheAccident != ""){
@@ -96,8 +96,7 @@ console.log( $rootScope.constat);
                        
                         if ($rootScope.constat.ficheAccident == $rootScope.ficheAccident[i].id){
                               $scope.fiche = $rootScope.ficheAccident[i];
-                               console.log('******');
-                               console.log($scope.fiche);
+
                         }
                 }
                 
@@ -154,22 +153,29 @@ console.log( $rootScope.constat);
            $rootScope.constat.date_constat = $scope.date_constat;
        //}
         
-      console.log($rootScope.constat);
+     // console.log($rootScope.constat);
 
 
-if (!$stateParams.id){//enregistrement
-                var obj = {};
-                constatData.saveConstat($rootScope.constat).then(function (res) {
-                    console.log(res);
-                    $rootScope.constats.push(res);
-                }
-                );
-            } 
+
 
      //   $scope.fiche = 
        //         {id : "171A", numero :"171A" ,commentaire : "S'il est en double file ou au milieu de la chaussée, un véhicule en stationnement prend une une part passive dans un accident, la position de l'autre véhicule importe peu puisqu'il est nécessairement en mouvement"};
         
 
-    }})
+    }
+        
+    
+      $scope.saveConstat = function () {
+                var obj = {};
+                constatData.saveConstat($rootScope.constat).then(function (res) {
+                    $rootScope.constats.push(res);
+                    $ionicHistory.nextViewOptions({
+                     disableBack: true
+                     });
+                    $state.go('home');
+                }
+        )};
+        
+    })
     ;
 

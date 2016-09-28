@@ -1,4 +1,4 @@
-<ion-view view-title="ConstaMagic - <b>Le constat</b>">
+<ion-view view-title="ConstaMagic - <b>Etape 8 Le constat</b>">
 	<ion-content class="padding etape">
 
 		<h3><img src="img/icon/constat.png"><span>Le constat</span></h3>
@@ -8,47 +8,58 @@
 		<div class="item item-divider">
 			Date du constat : {{date_constat}}
 		</div>
-
-		<div class="item item-divider">
-			Commentaire :
+		
+		<div class="center">
+			<a class="button" ng-if="enregistrer==1" ng-click="saveConstat()"><span>Enregistrer le constat</span></a>
+		</div>
+	<br>
+		<div class="constat-divider">
+			Commentaire
 		</div>
 		<div>
 			<p> {{fiche.commentaire}}</p>
 		</div>
 
-		<div class="item item-divider">
+		<div class="constat-divider">
 			Cases a cocher en zone 12
 		</div>
 		<div>
-			<div class="row header">
+			<div class="row header titre-tb center">
 				<div class="col col-20 item item-divider">Véh. A</div>
 				<div class="col col-60 item item-divider">Circonstance</div>
 				<div class="col col-20 item item-divider">Véh. B</div>
 			</div>
 
 			<div class="row" ng-repeat="c in circonstances">
-				<div ng-if="c.vecA==true" class="col col-20"><i class="icon ion-ios-close-outline"> {{c.id}}</i></div>
-				<div ng-if="c.vecA==false" class="col col-20"> <i class="icon ion-ios-circle-outline"> {{c.id}}</i></div>
+				<div ng-if="c.vecA==true" class="col col-20 center"><i class="icon ion-android-checkbox-outline" style="color:#2093bd; font-size: 1.5em;"> {{c.id}}</i></div>
+				<div ng-if="c.vecA==false" class="col col-20 center"> <i class="icon ion-android-checkbox-outline-blank" style="font-size: 1.5em;"> {{c.id}}</i></div>
 
-				<div class="col col-60">{{c.libelle}}</div>
-				<div ng-if="c.vecB==true" class="col col-20">{{c.id}} <i class="icon ion-ios-close-outline"></i></div>
-				<div ng-if="c.vecB==false" class="col col-20">{{c.id}} <i class="icon ion-ios-circle-outline"></i></div>
+				<div class="col col-60 center ">{{c.libelle}}</div>
+				<div ng-if="c.vecB==true" class="col col-20 center" style="font-size: 1.5em;">{{c.id}} <i class="icon ion-android-checkbox-outline" style="color:#2093bd; font-size: 1.5em;"></i></div>
+				<div ng-if="c.vecB==false" class="col col-20 center" style="font-size: 1.5em;">{{c.id}} <i class="icon ion-android-checkbox-outline-blank" style="font-size: 1.5em;"></i></div>
 			</div>
+			
+			<div class="row total">
+				<div class="col col-20 tb-right center" style="font-size: 1.5em;"><b>{{fiche.total_A}}</b></div>
+
+				<div class="col col-60 center"><b>Indiqué le nombre de cases marquées d'une croix</b></div>
+				<div class="col col-20 tb-left center" style="font-size: 1.5em;"><b>{{fiche.total_B}}</b></div>
+			
 
 		</div>
 
 
-		<div class="item item-divider">Renseignements complémentaires indispensables à indiquer en zone 14 "Observations"</div>
-		<p>Véhicule A :</p>
+		<div class="constat-divider">Renseignements complémentaires indispensables à indiquer en zone 14 "Observations"</div>
+		<p ng-if="fiche.obs_a!=''">Véhicule A :</p>
 		<p>{{fiche.obs_a}}</p>
-		<p>Véhicule B :</p>
+		<p ng-if="fiche.obs_b!=''">Véhicule B :</p>
 		<p>{{fiche.obs_b}}</p>
 
-		<p>NB :</p>
+		<p ng-if="fiche.obs_nota!=''">NB :</p>
 		<p>{{fiche.obs_nota}}</p>
 
 
-		<div class="item item-divider">16 - Véhicule A</div>
+		<div class="constat-divider">16 - Véhicule A</div>
 
 		<div ng-if="vecA=='voiture'">
 			<div class="row">
@@ -136,7 +147,7 @@
 			</div>
 		</div>
 
-		<div class="item item-divider">16 - Véhicule B</div>
+		<div class="constat-divider">16 - Véhicule B</div>
 
 		<div ng-if="vecB=='voiture'">
 			<div class="row">
@@ -224,7 +235,7 @@
 			</div>
 		</div>
 
-		<div class="item item-divider">Croquis de l'accident (exemple) </div>
+		<div class="constat-divider">Croquis de l'accident (exemple) </div>
 		<div class="list card">
 			<div class="item item-image">
 				<img ng-src="{{image[0].url}}">
