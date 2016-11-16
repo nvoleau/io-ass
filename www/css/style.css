@@ -116,6 +116,8 @@ ion-content .buttonC:hover      { background:url('../img/conseils.png') no-repea
 
 ion-content .circonst           { padding: 0 15px; width: 100px; height: 100px; font-size:1.4em; line-height: 1.4em; min-width: 52px; min-height: 47px; margin: 6px 2px; }
 
+ion-content .circonstance           {  font-size:1.4em; line-height: 1.4em }
+
  
 /* form
 ==================================*/
