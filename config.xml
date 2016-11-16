@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.ionicframework.constamagic05164650" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>ConstaMagic.0.6</name>
+  <name>ConstaMagic.0.7</name>
   <description>
-        An Ionic Framework and Cordova project.
+        Aide à la rédaction d'un constat
     </description>
   <author email="voleau@gmail.com" href="http://nicolasvoleau.fr/">
-      Your Name Here
+      
     </author>
   <content src="index.html" />
   <access origin="*" />

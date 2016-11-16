@@ -27,7 +27,8 @@ app
 $scope.setChocVecB = function(choc){
       $rootScope.constat.choc_vehiculeB = choc;
       console.log( $rootScope.constat);
-        $state.go("constat"); 
+        //$state.go("constat"); 
+        $state.go("const_assurances"); 
  }
 
     })

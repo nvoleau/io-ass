@@ -51,9 +51,15 @@ app
             $state.go('const_conducteurs')
         }
 
+//ancien
         $scope.goToCirconstance = function (conducteur) {
             $rootScope.constat.conducteur = conducteur.id;
             $state.go('const_circonstances')
+        }
+//nouveau
+        $scope.goToConstat = function (conducteur) {
+            $rootScope.constat.conducteur = conducteur.id;
+            $state.go('constat')
         }
         
         //******************
