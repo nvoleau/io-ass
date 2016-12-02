@@ -103,6 +103,7 @@ app
 
         $scope.gotoVehiculeA = function(constat){
             $rootScope.constat.ficheAccident = constat;
+            console.log("tititititit");
             
             
                 $state.go("vehiculeA"); 

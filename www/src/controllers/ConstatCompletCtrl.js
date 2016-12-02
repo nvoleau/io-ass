@@ -11,6 +11,26 @@ $scope.toggleLeft = function() {
     $ionicSideMenuDelegate.toggleLeft();
   };
 
+  console.log($rootScope);
+
+  //recuperation du conducteur
+    // recuperation de l'image $scope.image.image
+                 $scope.conducteur = $rootScope.conducteurs.filter(function (el) {
+
+                    return el.id == $rootScope.constat.conducteur;
+                });
+
+
+              $scope.assurance = $rootScope.assurances.filter(function (el) {
+
+                    return el.id == $rootScope.constat.assurance;
+                });
+
+                    $scope.vehicule = $rootScope.vehicules.filter(function (el) {
+
+                    return el.id == $rootScope.constat.vehicule;
+                });
+
  if ($stateParams.id) { //on vient de la vue initiale
             constatData.getByIdConstat($stateParams.id).then(function (res) {
                 $rootScope.constat = res;

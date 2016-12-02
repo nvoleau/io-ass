@@ -13,6 +13,34 @@
 			<a class="button" ng-if="enregistrer==1" ng-click="saveConstat()"><span>Enregistrer le constat</span></a>
 		</div>
 	<br>
+
+<div class="constat-divider">
+			07 - Véhicule A
+		</div>
+		<p>Marque  : {{vehicule[0].marque}}</p>
+		<p>Modèle  : {{vehicule[0].modele}}</p>
+		<p>Immat : {{vehicule[0].immat}}</p>
+		<div>
+		</div>
+
+	<div ng-if="assurance[0].name!=''">
+		<div class="constat-divider">
+			08 - Société d'assurance
+		</div>
+		<p>Societe  : {{assurance[0].name}}</p>
+		<p>Numéro de contrat  : {{assurance[0].contrat}}</p>
+		<p>Numéro de carte verte : {{assurance[0].green}}</p>
+		<p>Agence  : {{assurance[0].ag_name}}</p>
+		<p>Adresse : {{assurance[0].ag_addr}}</p>
+		</<div>
+			
+		</div>
+		<div class="constat-divider">
+			09 - Conducteur
+		</div>
+		<p>nom  : {{conducteur[0].nom}} - prenom  : {{conducteur[0].prenom}}</p>
+		<p>Permis de conduire  : {{conducteur[0].permnum}}</p>
+
 		<div class="constat-divider">
 			Commentaire
 		</div>
@@ -31,12 +59,12 @@
 			</div>
 
 			<div class="row" ng-repeat="c in circonstances">
-				<div ng-if="c.vecA==true" class="col col-20 center"><i class="icon ion-android-checkbox-outline" style="color:#2093bd; font-size: 1.5em;"> {{c.id}}</i></div>
-				<div ng-if="c.vecA==false" class="col col-20 center"> <i class="icon ion-android-checkbox-outline-blank" style="font-size: 1.5em;"> {{c.id}}</i></div>
+				<div ng-if="c.vecA==true" class="col col-20 center"><i class="icon ion-android-checkbox-outline" style="color:red"> {{c.id}}</i></div>
+				<div ng-if="c.vecA==false" class="col col-20 center"> <i class="icon ion-android-checkbox-outline-blank" style=""> {{c.id}}</i></div>
 
 				<div class="col col-60 center ">{{c.libelle}}</div>
-				<div ng-if="c.vecB==true" class="col col-20 center" style="font-size: 1.5em;">{{c.id}} <i class="icon ion-android-checkbox-outline" style="color:#2093bd; font-size: 1.5em;"></i></div>
-				<div ng-if="c.vecB==false" class="col col-20 center" style="font-size: 1.5em;">{{c.id}} <i class="icon ion-android-checkbox-outline-blank" style="font-size: 1.5em;"></i></div>
+				<div ng-if="c.vecB==true" class="col col-20 center" style="color:red">{{c.id}} <i class="icon ion-android-checkbox-outline" style="color:red"></i></div>
+				<div ng-if="c.vecB==false" class="col col-20 center" style="">{{c.id}} <i class="icon ion-android-checkbox-outline-blank" style=""></i></div>
 			</div>
 			
 			<div class="row total">
