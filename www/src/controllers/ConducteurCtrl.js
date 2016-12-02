@@ -51,7 +51,7 @@ app
             } else { //modification
                 conducteurData.updateConducteur(item);
             }
-            $state.go('conducteurs');
+             $ionicHistory.goBack(-1);
         }
 
     })

@@ -52,7 +52,7 @@ app
             } else { //modification
                 vehiculeData.updateVehicule(item);
             }
-            $state.go('vehicules');
+            $ionicHistory.goBack(-1);
         }
 
     })

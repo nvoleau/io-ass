@@ -3,7 +3,7 @@
 
 
 app
-    .controller('constatForm', function ($scope, conducteurData, itemData, vehiculeData, $state, $rootScope, $stateParams) {
+    .controller('constatForm', function ($scope, conducteurData, itemData, vehiculeData, $state, $rootScope, $stateParams,$ionicHistory) {
 
 
        

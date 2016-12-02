@@ -29,7 +29,9 @@ app
 
 
     })
-    .controller('assForm', function ($scope, itemData, $state,$rootScope,$stateParams) {
+    .controller('assForm', function ($scope, itemData, $state,$rootScope,$stateParams,$ionicHistory) {
+
+       console.log($ionicHistory.viewHistory());
             
              if($stateParams.id){
                 itemData.getByIdAssurance($stateParams.id).then(function(res){
@@ -53,7 +55,9 @@ app
                 }else{ //modification
                        itemData.updateAssurance(item);
                 }
-                $state.go('assurances');
+                //$state.go('assurances');
+                console.log($ionicHistory.viewHistory());
+                $ionicHistory.goBack(-1);
             }
 
     })
