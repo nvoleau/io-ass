@@ -63,8 +63,9 @@ app
         }
         
         //******************
-        $scope.gotoSousFamille = function (idFamille){
+        $scope.gotoSousFamille = function (idFamille,libelleFamille){
              $rootScope.constat.famille = idFamille;
+             $rootScope.libelleFamille = libelleFamille;
               // attention si ID = 2 ou 4 ou 7 alors on doit aller en dessous
               if(idFamille==1 || idFamille==3 || idFamille==5 || idFamille==6){
                 $state.go("1_circonst");
@@ -87,8 +88,9 @@ app
         
         //*********************
         
-         $scope.gotoAllCirconstance = function(idSousFamille){
+         $scope.gotoAllCirconstance = function(idSousFamille,libelleSousFamille){
             $rootScope.constat.sousFamille=idSousFamille
+             $rootScope.libelleSousFamille = libelleSousFamille;
             $state.go("2_circonst"); 
          }
          
